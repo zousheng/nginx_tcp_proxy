@@ -16,8 +16,8 @@ RUN cd /usr/src/nginx/tengine-2.1.1 && ls \
     &&  ./configure --add-module=/usr/src/nginx/nginx_tcp_proxy_module-master \
     &&  make  && make install 
 
-ADD nginx.conf /usr/src/nginx/conf/
-ADD conf.d    /usr/src/nginx/conf/
+ADD nginx.conf /usr/local/nginx/conf/
+ADD conf.d    /usr/local/nginx/conf/
 
 ENV PATH /usr/local/nginx/sbin:$PATH
 WORKDIR /usr/local/nginx/html
